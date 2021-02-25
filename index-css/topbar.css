@@ -1,0 +1,60 @@
+#topbar{
+    height: 40px;
+    background-color:#333;
+    line-height: 40px  
+}
+.topbar-navlist{
+    height: 40px;
+}
+.topbar-navlist li{
+    float: left;
+}
+.topbar-navlist li a{
+    color:#b0b0b0;
+    padding: 0 8px;
+    border-right: 1px solid #424242;
+}
+.topbar-navlist li:first-child{
+    padding-left: 0;
+}
+.topbar-navlist li:last-child{
+    padding-right: 0;
+    border-right: none;
+}
+.topbar-navlist li a:hover{
+    color:#fff;
+}
+#topbar .download{
+    top:40px;
+    left: -28px;
+    width: 126px;
+    height: 0;
+    overflow: hidden;
+    font-size: 14px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 3px #c0c0c0;
+    transition: 0.3s;
+    z-index: 99;
+}
+#topbar li.icons::after{
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    border: 10px solid transparent;
+    border-top:none;
+    border-bottom-color:#fff;
+    opacity: 0;
+}
+#topbar .download img{
+    display: block;
+    width: 90px;
+    margin:20px auto 0;
+}
+#topbar li.icons:hover::after{
+    opacity: 1;
+}
+#topbar li:hover .download{
+    height: 150px;
+}

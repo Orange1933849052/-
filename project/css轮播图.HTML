@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,ul,li{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .container{
+            position: relative;
+            width: 600px;
+            height: 500px;
+            margin:50px auto;
+            overflow: hidden;
+            border: 1px solid red;
+        }
+        ul{
+            width: 1800px;
+            margin-left: 0;
+            border:1px solid red;
+        }
+        /* Ul是外面盒子的三倍 超出隐藏 通过移动ul的位置 进行轮播的效果 */
+        ul>li{
+            float: left;
+            width: 600px;
+            height: 500px;
+            line-height: 500px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .clearfix::after{
+            content:"";
+            display: block;
+            clear:both;
+        }
+        .a{
+            background:url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589535526898&di=cc7a017d597fa4ecfe8e64e7d748f52d&imgtype=0&src=http%3A%2F%2Fwww.gs.chinanews.com.cn%2F2014%2F1121%2FU5P2DT20141121150215.jpg) 0 0/600px 500px;
+        }
+        .b{
+            background-color: #006600;
+        }
+        .c{
+            background-color: #6600cc;
+        }
+        input#zero:checked~ul{
+            margin-left: 0;
+        }
+        input#one:checked~ul{
+            margin-left: -600px;
+        }
+        input#two:checked~ul{
+            margin-left: -1200px;
+        }
+        label{
+            display: block;
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: #ff33ff;
+        }
+        .aa{
+            left: 20px;
+            bottom:10px;
+        }
+        .bb{
+            left:120px;
+            bottom: 10px;
+        }
+        .cc{
+            left: 220px;
+            bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="radio" name="name" id="zero">
+        <label for="zero" class="aa">阿青</label>
+        <input type="radio" name="name" id="one">
+        <label for="one" class="bb">阿绿</label>
+        <input type="radio" name="name" id="two">
+        <label for="two" class="cc">阿紫</label>
+        <ul class="clearfix">
+            <li class="a">阿青</li>
+            <li class="b">阿绿</li>
+            <li class="c">阿紫</li>
+        </ul>
+    </div>
+</body>
+</html>

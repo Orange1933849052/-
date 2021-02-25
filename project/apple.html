@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* base */
+        body,ul,ol,p,li,h1,h2,h3,dl,dd{
+            margin: 0;
+            padding:0;
+            list-style: none;
+        }
+        a{
+            color:#000;
+            text-indent: none;
+            text-decoration: none;
+        }
+        .container{
+            width: 1226px;
+            margin:0 auto;
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .clearfix::after{
+            content: "";
+            display: block;
+            clear:both;
+        }
+        .f-size12{
+            font-size: 12px;
+        }
+        /* topbar */
+        #topbar{
+            height: 40px;
+            line-height: 40px;
+            background-color: #333;
+        }
+        .topbar-navlist{
+            height: 40px;
+        }
+        .topbar-navlist li{
+            float:left;
+        }
+        .topbar-navlist li a{
+            color:#b0b0b0;
+            padding: 0 30px;
+            
+        }
+        .topbar-navlist li a:hover{
+            color:#fff;
+        }
+        .topbar-navlist li:first-child a{
+            padding-left: 50px;
+        }
+        .topbar-navlist li:last-child a{
+            padding-right: 0;
+        }
+        /* header */
+        .choose{
+            height: 40px;
+            background-color: #fff;
+            line-height: 40px;
+        }
+        .choose>p{
+            text-align: center;
+            font-size: 12px;
+        }
+        .choose>p>span{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- topbar -->
+    <div id="topbar">
+        <div class="container clearfix">
+            <div class="topbar-navlist fl">
+                <ul class="clearfix f-size12">
+                    <li>
+                        <a href=""></a>                        
+                    </li>
+                    <li>
+                        <a href="">Mac</a>
+                    </li>
+                    <li>
+                        <a href="">iPad</a>
+                    </li>
+                    <li>
+                        <a href="">iPhone</a>
+                    </li>
+                    <li>
+                        <a href="">Watch</a>
+                    </li>
+                    <li>
+                        <a href="">Music</a>
+                    </li>
+                    <li>
+                        <a href="">技术支持</a>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                    <li>
+                        <a href=""></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
+    <header>
+        <div class="container choose">
+            <p><span>在线选购</span>，享受免费送货，Specialist专家支持，免息分期等服务</p>        
+        </div>
+    </header>
+</body>
+</html>

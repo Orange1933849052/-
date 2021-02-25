@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        
+        .container {
+            width: 1300px;
+            padding: 20px;
+            margin: 50px auto;
+        }
+        
+        .container>ul>li {
+            float: left;
+        }
+        
+        .container>ul>li>img {
+            transition: 1s linear;
+        }
+        
+        .container>ul>li:hover>img {
+            margin-top: -50px;
+        }
+        
+        .container>ul>li~li {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="clearfix">
+            <li><img src="./images/1.jpg" alt=""></li>
+            <li><img src="./images/2.gif" alt=""></li>
+            <li><img src="./images/3.png" alt=""></li>
+            <li><img src="./images/4.png" alt=""></li>
+            <li><img src="./images/5.png" alt=""></li>
+        </ul>
+    </div>
+</body>
+
+</html>

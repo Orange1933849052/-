@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fist day nervious</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1819215_hbxeqwhk3is.css">
+    <link rel="stylesheet" href="./index-css/topbar.css">
+    <link rel="stylesheet" href="./index-css/main.css">
+    <link rel="stylesheet" href="./index-css/base.css">
+    <link rel="stylesheet" href="./index-css/list-nav.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./index-css/xuanxiangka.css">
+</head>
+<body>
+    <!-- topbar -->
+    <div id="topbar">
+        <div class="container clearfix">
+            <div class="topbar-navlist fl">
+                <ul class="clearfix f-size12">
+                    <li>
+                    <a href="./build/install.php">项目</a>
+                    </li>
+                    <li>
+                        <a href="./project/project.html">感谢</a>
+                    </li>
+                    <li class="pos-r icons">
+                        <a href="./project/project.html">微信</a>
+                        <div class="download pos-a">
+                            <img src="./images/weixin.jpg" alt="weixin" width="" height="">
+                            我的微信
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- header -->
+    <header>
+        <div class="container clearfix">
+            <div class="list-nav fl">
+                <!-- logo -->
+                <h1 class="logo">
+                    <a href=""></a>
+                </h1>
+                <!-- 自我介绍 -->
+                <div class="intro-self">
+                    <h3>WYD</h3>
+                    <h3 style="color:green;text-shadow: 2px 2px #cccccc;">A Developer</h3>
+                </div>
+                <ul id="menu">
+                    <li>
+                        <P>
+                            <i class="iconfont icon-home"></i>
+                            <a href="#">首页</a>
+                            
+                        </P>
+                    </li>
+                    <li>
+                        <P>
+                            <i class="iconfont icon-github"></i>
+                            <a href="#">仓库</a>
+                            
+                        </P>
+                    </li>
+                    <li>
+                        <P>
+                            <i class="iconfont icon-book_icon"></i>
+                            <a href="#">书单</a>
+                            
+                        </P>
+                    </li>
+                    <li>
+                        <P>
+                            <i class="iconfont icon-dianying"></i>
+                            <a href="#">电影</a>
+                            
+                        </P>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <contain>
+        <div class="container">
+            <div class="xxk">
+                <div id="wrap">
+                    <!-- 图片部分对应的布局 -->
+                    <div id="img">
+                        <ul>
+                            <li class="show"><a href=""><img src="image/1.jpg" alt=""></a></li>
+                            <li><a href=""><img src="image/2.jpg" alt=""></a></li>
+                            <li><a href=""><img src="image/3.jpg" alt=""></a></li>
+                            <li><a href=""><img src="image/4.jpg" alt=""></a></li>
+                            <li><a href=""><img src="image/5.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <!-- 按钮部分对应的布局 -->
+                    <div id="tab">
+                        <ul>
+                            <li class="active">开黑吗</li>
+                            <li>我亚索贼6</li>
+                            <li>只要我E的够快</li>
+                            <li>队友的问号</li>
+                            <li>就跟不上我</li>
+                        </ul>
+                    </div>
+                    <!-- 左右按钮布局 -->
+                    <div id="arrow">
+                        <div class="left"> ＜ </div>
+                        <div class="right"> ＞ </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fr boxright">
+                
+            </div>
+        </div>
+    </contain>
+    <left>
+        <div></div>
+    </left>
+    <script>
+       
+        let aTabLi = document.querySelectorAll("#tab ul li"),
+            aImgLi = document.querySelectorAll("#img ul li"),
+            aArrow = document.querySelectorAll("#arrow div"),
+            len = aTabLi.length
+        ;
+        let goudan = 0;//定义变量,用来表示当前显示的哪个图片
+        
+        // 各个模块变化函数
+        function change(x){
+            aTabLi[goudan].className = "";//当前显示的tab样式清除
+            aImgLi[goudan].className = "";//当前显示的图片隐藏
+
+            goudan = x;
+
+            aTabLi[goudan].className= "active";//点击的tab样式添加
+            aImgLi[goudan].className= "show";//点击对应的图片的显示
+        }
+        //给Tab对应的li添加点击事件
+        for(let i=0; i<len ;i++){
+            aTabLi[i].onclick=function(){
+                //只有当部重复点击当前显示的那个tab时,才需要执行事件内容
+                if(goudan===i)return;
+                change(i);
+            };
+        }
+        //左右箭头的点击事件
+        //左箭头
+        aArrow[0].onclick=function(){
+            let x=goudan;
+            x--;
+            if(x<0){x=len-1}
+            change(x);
+        }
+        //右箭头
+        aArrow[1].onclick=function(){
+            let x=goudan;
+            x++;
+            if(x>=len){
+                x=0;
+            }
+            change(x);
+        };
+    </script>
+</body>
+</html>

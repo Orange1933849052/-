@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">  
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">    
+    <script src="https://unpkg.com/swiper/js/swiper.js"> </script>  
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
+    <style>
+        *{margin: 0;font-family:'Times New Roman', Times, serif;text-decoration: none;}
+        a{
+            color: #000;
+        }
+        .swiper-container {
+        width: 600px;
+        height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="./小米官网.HTML">
+                    <p>小米官网</p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="../Js 作业/LOL选项卡.html">
+                    <p>LOL选项卡</p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="../Js 作业/购物车结算.html">
+                    <p>购物车结算</p>
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="./摩天轮.html">
+                    <p>摩天轮</p>
+                </a>
+            </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+    </div>
+    
+    <script>        
+        var mySwiper = new Swiper('.swiper-container',{
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+}); 
+    </script>
+    
+</body>
+</html>

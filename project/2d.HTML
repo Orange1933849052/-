@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding:0;
+        list-style: none;
+    }
+    body{
+        background-color: #ccc;
+    }
+    .container{
+        width: 1400px;
+        height: 400px;
+        padding: 20px;
+        margin:200px auto;
+        border:2px solid #9933ff;
+    }
+    .container>ul>li{
+        float: left;
+        position: relative;
+        width: 700px;
+        height: 400px;
+        overflow: hidden;
+    }
+    .container>ul>li::before{
+        content:"";
+        position: absolute;
+        left:-40%;
+        top:-146%;
+        width:92%;
+        padding-right:20px;
+        height: 400px;
+        background-color: #fff;
+        opacity: 0.6;
+        transform:rotate(45deg);
+        z-index:1;
+        transition:0.5s linear;
+    }
+    .container>ul>li::after{
+        content:"";
+        position: absolute;
+        left:110%;
+        top:7%;
+        width:150%;
+        height:150%;
+        background-color: #fff;
+        opacity: 0.9;
+        transform: rotate(45deg);
+        z-index: 1;
+        transition:0.5s linear;
+    }
+    .container>ul>li>img{
+        width: 100%;
+        height:100%;
+        transition:0.5s linear;
+    }
+    .container>ul>li:hover>img{
+        transform: scale(1.2);
+    }
+    .container>ul>li:hover::before{
+        top:-102%;
+    }
+    .container>ul>li:hover::after{
+        left:29%;
+    }
+    .content{
+        position: absolute;
+        top: 125px;
+        right: -230px;
+        width: 220px;
+        height:150px;
+        z-index:2;
+        transition:0.5s linear;
+    }
+    .container>ul>li:hover .content{
+        right: 20px;
+    }
+    .content h3{
+        font-size: 25px;
+    }
+    .content p{
+        font-size:20px;
+    }
+    .content .circle-box{
+        margin-top:20px;
+    }
+    .content .circle-box>.circle{
+        float: right;
+        width:40px;
+        height:40px;
+        background-color:#000;
+        border-radius: 50%;
+        cursor:pointer;
+        transition:0.5s linear;
+    }
+    .content .circle-box>.circle:hover{
+        border-radius: 0;
+        background-color: #fff;
+        box-shadow: inset 0 0 3px 1px #000;
+    }
+    .content .circle-box>.circle:first-child{
+        margin-left: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <ul class="box clearfix">
+            <li class="item">
+                <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=4078633305,3008445227&fm=26&gp=0.jpg alt="" width="" height="">
+                <div class="content">
+                    <h3>Hello Warriors</h3>
+                    <p>Put your hands up</p>
+                    <div class="circle-box clearfix">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </li>
+            <li class="item">
+                <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3194571868,3301820921&fm=26&gp=0.jpg" alt="" width="" height="">
+                <div class="content">
+                    <h3>Hello everbody</h3>
+                    <p>Welcome to the Golden State</p>
+                    <div class="circle-boxclear fix">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

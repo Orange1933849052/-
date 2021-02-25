@@ -1,0 +1,44 @@
+body,ul,ol,p,li,h1,h2,h3,dl,dd{
+    margin: 0;
+    padding:0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:#000;
+}
+.container{
+    width: 1226px;
+    margin:0 auto;
+}
+img{
+    vertical-align: middle;
+}
+/* 浮动 */
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+}
+/* 定位 */
+.pos-a{
+    position: absolute;
+}
+.pos-r{
+    position: relative;
+}
+.pos-f{
+    position: fixed;
+}
+/* 字体 */
+.f-size12{
+    font-size: 12px;
+}
+.f-size16{
+    font-size: 16px;
+}

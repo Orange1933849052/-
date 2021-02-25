@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    a{text-align: none;}
+    ul,li{text-align: none;}
+    body{
+        font-size:14px;
+        font-family:"微软雅黑";
+    }
+    #check{
+        width: 600px;
+        margin:14px auto;
+    }
+    #check h3{
+        line-height: 35px;
+    }
+    #check ul li{
+        float: left;
+        text-align: center;
+        font-size: 12px;
+    }
+    #check ul li{
+        float: left;
+    }
+    #check ul li.ck{
+        background-color: #fff;
+    }
+</style>
+</head>
+<body>
+    <div id="check">
+        <h3>我最喜欢的</h3>
+        <ul>
+            <li>苹果</li>
+            <li>梨子</li>
+            <li>香蕉</li>
+            <li>香蕉</li>
+            <li>香蕉</li>
+            <li>香蕉</li>
+        </ul>
+    </div>
+    <script>
+        var oCheck=document.getElementById("check");
+        var oLi=oCheck.getElementsByTagName("li");
+        for(var i=0;i<oLi.length;i++){
+            oLi[i].mark=true;
+            oLi[i].onclick=function(){
+                oLi[i].mark=true;
+                oLi[i].onclick=function(){
+                    if(this.mark){
+                        this.className="ck";
+                    }else{
+                        this.className="";
+                    }
+                    this.mark=!this.mark;                   
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,ul,li{
+            padding:0;
+            margin: 0;
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .nav{
+            width: 600px;
+            height: 40px;
+            margin: 50px auto;
+            border-radius: 8px;
+            background-color: #3d8332;
+        }
+        .nav .nav-item{
+            position:relative;
+            float:left;
+            width: 100px;
+            height: 100%;
+            line-height: 40px;
+            color:#fff;
+            text-align: center;
+            font-size:14px;
+        }
+        .nav .nav-item a{
+            display: block;
+            width: 100px;
+            line-height: 40px;
+            color:#fff;
+            text-align: center;
+            font-size: 14px;
+        }
+        .nav .nav-item .sec-nav{
+            position: absolute;
+            top:40px;
+            left:0;
+            width: 120px;
+            height: 0;
+            font-size: 14px;
+            overflow: hidden;
+            perspective: 800px;
+        }
+        .nav .nav-item:nth-child(2) .sec-nav{
+            width: 180px;
+            transition: height .7s linear;
+        }
+        .nav .nav-item:nth-child(2):hover .sec-nav{
+            height: 150px;
+        }
+        .nav .nav-item:hover .sec-nav{
+            height: auto;
+        }
+        .nav .nav-item:hover .sec-nav li{
+            width:100%;
+            height: 30px;
+            line-height: 30px;
+            text-indent: 10px;
+            color:#fff;
+            background-color: #6c0;
+            cursor:pointer;
+            transform-origin: top center;
+            transition: transform .3s linear;
+        }
+        .nav .nav-item .sec-nav li:nth-child(even){
+            background-color: #009900;
+        }
+        .nav .nav-item:nth-child(2) li,
+        .nav .nav-item:nth-child(3) li{
+            transform:rotateX(-90deg);
+        }
+        .nav .nav-item:nth-child(2):hover li,
+        .nav .nav-item:nth-child(3):hover li{
+            transform:rotateX(0deg);
+        }
+        .nav-item:nth-child(2):hover li:nth-child(2){
+            transition-delay: .3s;
+        }
+        .nav-item:nth-child(2):hover li:nth-child(3){
+            transition-delay: .6s;
+        }
+        .nav-item:nth-child(2):hover li:nth-child(4){
+            transition-delay: .9s;
+        }
+        .nav-item:nth-child(2):hover li:nth-child(5){
+            transition-delay: 1.2s;
+        }
+        .nav .nav-item:nth-child(4) li:nth-last-child(even){
+            transform-origin: right center;
+            transform:rotateY(-90deg);
+        }
+        .nav .nav-item:nth-child(4) li:nth-last-child(odd){
+            transform-origin: left center;
+            transform:rotateY(90deg);
+        }
+        .nav .nav-item:nth-child(4) :hover li{
+            transform:rotateY(0deg);
+        }
+        .nav .nav-item:nth-child(6) li{
+            transform-origin: center -50px;
+        }
+        .nav .nav-item:nth-child(6) li:nth-child(odd){
+            transform:rotateZ(60deg);
+        }
+        .nav .nav-item:nth-child(6) li:nth-child(even){
+            transform:rotateZ(-60deg);
+        }
+        .nav .nav-item:nth-child(6) :hover li{
+            transform:rotateZ(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li class="nav-item">
+                <a href="#">首页</a>
+            </li>
+            <li class="nav-item">
+                <a href="#">站长的书</a>
+                <ul class="sec-nav">
+                    <li>Web前端开发最佳实践</li>
+                    <li>编写可维护的Javascript</li>
+                    <li>锋利的Jquery</li>
+                    <li>图解Http</li>
+                    <li>Javascri设计模式</li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#">前端入门</a>
+                <ul class="sec-nav">
+                    <li>HTML入门</li>
+                    <li>CSS入门</li>
+                    <li>JavaScript入门</li>
+                    <li>jQuery入门</li>
+                    <li>Sass教程</li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#">前端进阶</a>
+                <ul class="sec-nav">
+                    <li>HTML和CSS进阶</li>
+                    <li>CSS3教程</li>
+                    <li>Html5 Canvas</li>
+                    <li>Jaon教程</li>
+                    <li>正则表达式</li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#">网站设计</a>
+                <ul class="sec-nav">
+                    <li>网页配色</li>
+                    <li>酷站欣赏</li>
+                    <li>PS设计</li>
+                    <li>网站布局</li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="#">开发工具</a>
+                <ul class="sec-nav">
+                    <li>Editplus</li>
+                    <li>sublime</li>
+                    <li>VScode</li>
+                    <li>webstorm</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

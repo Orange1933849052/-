@@ -1,0 +1,118 @@
+<!DOCTYPE html><!--声明文档类型 html5 单标签 -->
+<html lang="en"><!--html 的开始标签  双标签 存放网页的内容-->
+	<head><!--头部：存放网页上给浏览器或是搜索引擎看的信息 -->
+		<meta charset="UTF-8"><!--网页的语言 -->
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="Orange">
+		<meta name="Keywords" content="练习"><!--网页的关键字信息 -->
+		<meta name="Description" content="大神成长之路之练习"><!--网页的简介 -->
+		<title>Document</title><!--网页的名字 -->
+		<style>	
+			body,ul,li{
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.container{
+				width:1200px;
+				margin:50px auto;
+				border:1px solid #ccc;
+			}
+			ul.nav{
+				width: 740px;
+				margin:0 auto;
+				padding:10px 0;
+			}
+			ul.nav > li{
+				float:left;
+				padding:0 20px;
+				border-left:1px solid #eee
+			}
+			ul.nav>.nav-one{
+				border:none;
+			}
+			ul.content>li{
+				float:left;
+			}
+			.br{
+				border-right:1px solid #ccc;
+			}
+			.btr{
+				border-right:1px solid #ccc;
+				border-bottom:1px solid #ccc;
+			}
+			.bt{
+				border-bottom:1px solid #ccc;
+			}
+			.fl{
+				float:left;
+			}
+			.fr{
+				float:right;
+			}
+			.clearfix::after{
+				content:"";
+				display:block;
+				clear:both;
+			}
+			.item{
+				width:442px;
+			}
+			.box{
+				width:422px;
+			}
+		</style>
+	</head>
+	<body><!--身体：存放用户在网页上能够看到的所以内容 -->
+		<div class="container">
+			<ul class="nav clearfix">
+				<li class="nav-one">护肤</li>
+				<li>彩妆</li>
+				<li>美发</li>
+				<li>美体</li>
+				<li>香氛</li>
+				<li>肌肤</li>
+				<li>产品</li>
+				<li>精华</li>
+				<li>修护</li>
+			</ul>
+			<ul class="content clearfix">
+				<li class="br">
+					<img src="./images/t11.jpg" alt="" width=“” height=“” />
+				</li>
+				<li>
+					<ul class="item clearfix">
+						<li class="fl btr">
+							<img src="./images/t22.jpg" alt="" width=“” height=“”/>
+						</li>
+						<li class="fr btr">
+							<img src="./images/t33.jpg" alt="" width=“” height=“”/>
+						</li>
+						<li class="fr btr">
+							<img src="./images/t44.jpg" alt="" width=“” height=“”/>
+						</li>
+						<li class="fl br">
+							<img src="./images/t66.jpg" alt="" width=“” height=“”/>
+						</li>
+						<li class="fr br">
+							<img src="./images/t55.jpg" alt="" width=“” height=“”/>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<ul class="box clearfix">
+						<li class="fl btr">
+							<img src="./images/t77.jpg" alt="" width=“” height=“”/>
+						</li>
+						<li class="fl bt">
+							<img src="./images/t88.jpg" alt="" width=“” height=“”/>
+						</li>
+						<li class="fl">
+							<img src="./images/t99.jpg" alt="" width=“” height=“”/>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html><!--html的结束标签-->
